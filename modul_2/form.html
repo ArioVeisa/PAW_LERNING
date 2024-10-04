@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        fieldset {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Registrasi</h1>
+
+    <form>
+        <!-- Biodata Section -->
+        <fieldset>
+            <legend>Biodata</legend>
+            <div class="form-group">
+                <label for="nama">Nama Mahasiswa:</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="nim">No Induk Mahasiswa (NIM):</label>
+                <input type="text" id="nim" name="nim">
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat Mahasiswa:</label>
+                <textarea id="alamat" name="alamat"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tanggal-lahir">Tanggal Lahir:</label>
+                <select id="tanggal-lahir" name="tanggal-lahir">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                </select>
+                <select id="bulan-lahir" name="bulan-lahir">
+                    <option value="Januari">Januari</option>
+                    <option value="Februari">Februari</option>
+                    <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                </select>
+                <select id="tahun-lahir" name="tahun-lahir">
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <input type="radio" id="pria" name="jenis-kelamin" value="Pria">
+                <label for="pria">Pria</label>
+                <input type="radio" id="wanita" name="jenis-kelamin" value="Wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+            <div class="form-group">
+                <label for="foto">Upload Foto:</label>
+                <input type="file" id="foto" name="foto">
+            </div>
+            <div class="form-group">
+                <label for="website">URL Website:</label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div class="form-group">
+                <label for="perguruan-tinggi">Perguruan Tinggi:</label>
+                <input type="text" id="perguruan-tinggi" name="perguruan-tinggi">
+            </div>
+        </fieldset>
+
+        <!-- Info Akun Section -->
+        <fieldset>
+            <legend>Info Akun</legend>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="ulangi-password">Ulangi Password:</label>
+                <input type="password" id="ulangi-password" name="ulangi-password">
+            </div>
+        </fieldset>
+
+        <!-- Kemampuan Dasar Section -->
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <div class="form-group">
+                <input type="checkbox" id="html" name="kemampuan" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="kemampuan" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="kemampuan" value="Javascript">
+                <label for="javascript">Javascript</label>
+                <input type="checkbox" id="php" name="kemampuan" value="PHP">
+                <label for="php">PHP</label>
+                <input type="checkbox" id="mysql" name="kemampuan" value="MySQL">
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" id="laravel" name="kemampuan" value="Laravel">
+                <label for="laravel">Laravel</label>
+                <input type="checkbox" id="react-native" name="kemampuan" value="React Native">
+                <label for="react-native">React Native</label>
+            </div>
+        </fieldset>
+
+        <!-- Buttons -->
+        <button type="reset">Reset</button>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>
