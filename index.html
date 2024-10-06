@@ -21,13 +21,25 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #ffffff;
+            color: #8A2BE2;
             text-align: center;
-            margin-bottom: 30px; /* Added some space below the heading */
+            margin-bottom: 30px;
+            opacity: 0; /* Start hidden */
+            transform: scale(0.8); /* Start smaller */
+            animation: fadeInScale 1s ease forwards; /* Add scale and fade-in effect */
+            animation-delay: 0.5s; /* Delayed after loading */
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1); /* Scale back to normal size */
+            }
         }
 
         ul {
@@ -37,7 +49,28 @@
         }
 
         ul li {
-            margin: 20px 0; /* Increased vertical space between links */
+            margin-top: 2em;
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly down */
+            animation: fadeIn 1s forwards; /* Fade and move up */
+        }
+
+        /* Add animation delays so they appear one by one */
+        ul li:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        ul li:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        ul li:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Move to original position */
+            }
         }
 
         a {
@@ -49,6 +82,8 @@
             border-radius: 25px;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
         }
 
         a:hover {
@@ -69,6 +104,90 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+        /* Information button at the top-right corner */
+        .info-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffff;
+            color: #8A2BE2;
+            font-size: 1.5rem; /* Make the "i" bigger */
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-btn:hover {
+            background-color: #8A2BE2;
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        .info-btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pop-up background overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Pop-up container */
+        .popup {
+            background-color: #fff;
+            padding: 30px;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Pop-up content */
+        .popup h2 {
+            margin-bottom: 20px;
+            color: #8A2BE2;
+        }
+
+        .popup p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Close button */
+        .close-popup-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #8A2BE2;
+        }
+
+        .close-popup-btn:hover {
+            color: red;
+        }
+
         /* Mobile responsive styles */
         @media (max-width: 600px) {
             h1 {
@@ -83,17 +202,51 @@
                 font-size: 1rem;
                 padding: 10px 20px;
             }
+
+            .info-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Daftar Tugas</h1>
+
         <ul>
             <li><a href="modul_1/tugas1.html">Tugas 1</a></li>
             <li><a href="modul_2/tugas1.html">Tugas 2</a></li>
-            <li><a href="modul_2/form.html">Tugas 2 (Form)</a></li>
+            <li><a href="modul_2/form.html">Tugas Form</a></li>
         </ul>
     </div>
+
+    <!-- Information Button (in the top-right corner) -->
+    <button class="info-btn" onclick="openPopup()">i</button>
+
+    <!-- Pop-up overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="close-popup-btn" onclick="closePopup()">×</button>
+            <h2>Informasi Mahasiswa</h2>
+            <p>Nama: Ayu Dewi</p>
+            <p>NIM: 201201290</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the pop-up
+        function openPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
