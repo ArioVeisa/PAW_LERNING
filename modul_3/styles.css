@@ -169,6 +169,133 @@ nav {
     }
 }
 
+/* main */
+main{
+    margin: 4em 3em;
+}
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+
+/* aside search  */
+aside{
+    flex-basis: 25%; /* Sidebar mengambil 30% dari lebar */
+    /* background-color: #eee; */
+    /* padding: 20px; */
+    margin: 0 2em;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styling untuk article */
+article {
+    flex-basis: 75%; /* Main content mengambil 70% dari lebar */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* padding: 20px; */
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Styling untuk gambar */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk paragraf */
+article p {
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk link */
+article a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk heading jika diperlukan */
+article h1, article h2, article h3 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background-color: #d1cece;
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5em 1em; /* Padding untuk ruang dalam */
+    /* text-align: center; Agar teks berada di tengah */
+    width: 100%; /* Agar kotak search sesuai dengan lebar container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    margin-bottom: 20px; /* Spasi bawah agar tidak menempel pada elemen berikutnya */
+    display: flex;
+    flex-direction: column; /* Tata letak kolom untuk konten vertikal */
+    justify-content: center; /* Agar konten berada di tengah vertikal */
+    align-items: center; /* Agar konten berada di tengah horizontal */
+    height: auto; /* Tinggi otomatis agar menyesuaikan konten */
+}
+
+
+.search-box h2 {
+    /* margin: 0 0 15px; /Spasi bawah teks heading */
+    color: #333;
+}
+.search-layout {
+    /* padding-top: 1em; */
+    align-self: center;
+}
+
+.search {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded search bar */
+    overflow: hidden;
+    width: 100%; /* Search bar memenuhi lebar container */
+    max-width: 500px; /* Lebar maksimal search bar */
+    margin: 0 auto; /* Agar search bar berada di tengah */
+}
+
+.search input {
+    border: none;
+    padding: 10px;
+    flex: 1; /* Input meluas mengikuti ukuran container */
+    outline: none;
+}
+
+.search button {
+    background-color: #fff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search button span {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
 /* For Mobile */
 @media (max-width: 480px) {
     nav {
@@ -196,3 +323,5 @@ nav {
         font-size: 0.8em;
     }
 }
+
+
