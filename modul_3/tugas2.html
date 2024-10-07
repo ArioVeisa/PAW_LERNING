@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <div class="logo">
+                <img src="https://bis-sby.telkomuniversity.ac.id/wp-content/uploads/2024/04/LOGO-LIGHT-UPPER1.png" alt="Logo" width="130px">
+            </div>
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Akademik</a></li>
+                    <li><a href="#">Kehidupan Kampus</a></li>
+                    <li><a href="#">Dosen & Staf</a></li>
+                </ul>
+            </div>
+            <div class="menu-right">
+                <i class="ri-search-line logo-search"></i>
+                <a href="#" class="cta-button">Daftar Sekarang</a>
+            </div>
+            <i class="ri-menu-line hamburger" id="hamburger"></i>
+        </nav>
+        <div class="hero-inline">
+            <h1>Pentingnya Integritas sebagai Fondasi Karakter <br> Mahasiswa Sistem Informasi</h1>
+            <p>2 JUN 2024 / ARTIKEL</p>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

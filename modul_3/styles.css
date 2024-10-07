@@ -1,0 +1,198 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(266, 63%, 32%, 0);
+    padding: 32px 56px;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    border-bottom: 3px solid white;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo-search {
+    padding-right: 1em;
+    color: #fff;
+}
+
+.cta-button {
+    border: 2px solid white;
+    padding: 12px 20px;
+    color: white;
+    background: transparent;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #4a1e84;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://bis-sby.telkomuniversity.ac.id/wp-content/uploads/2024/04/Frame-12.png');
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+}
+
+.hero-inline {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-inline h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-inline p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .cta-button {
+        margin-top: 10px;
+    }
+
+    .hero {
+        height: 55vh;
+    }
+
+    .hero-inline h1 {
+        font-size: 1.6em;
+    }
+
+    .hero-inline p {
+        font-size: 0.9em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        margin-bottom: 15px;
+    }
+}
+
+/* For Mobile */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-inline h1 {
+        font-size: 1.4em;
+    }
+
+    .hero-inline p {
+        font-size: 0.8em;
+    }
+}
