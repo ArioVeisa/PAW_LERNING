@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation Bar with Hover Underline and Background</title>
+    <style>
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #f0f0f0;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #40b1b1;
+            border-bottom: 3px solid transparent; /* Initial border-bottom hidden */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+        
+        nav ul li a:hover {
+            background-color: #333;
+            border-bottom: 3px solid #40b1b1; /* Underline color on hover */
+        }
+        
+        nav ul li a.active {
+            background-color: #333;
+            border-bottom: 3px solid #fff; /* Underline for active link */
+        }
+
+        nav ul li:nth-child(2) a,
+        nav ul li:nth-child(3) a,
+        nav ul li:nth-child(4) a {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        nav ul li a:not(.active):hover {
+            background-color: #333; /* Background change on hover for non-active links */
+            color: white; /* Ensure text color is visible on hover */
+        }
+    </style>
 </head>
 <body>
-    
+
+<nav>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
 </body>
 </html>
