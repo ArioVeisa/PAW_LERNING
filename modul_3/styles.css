@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,6 +71,8 @@ nav {
     color: #4a1e84;
 }
 
+
+
 /* Hero Section */
 .hero {
     background-image: url('https://bis-sby.telkomuniversity.ac.id/wp-content/uploads/2024/04/Frame-12.png');
@@ -109,6 +112,262 @@ nav {
 /* Responsive Design */
 
 /* For Tablets */
+
+/* main */
+main {
+    margin: 4em 3em;
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+
+/* aside search  */
+aside {
+    flex-basis: 25%;
+    /* Sidebar mengambil 30% dari lebar */
+    /* background-color: #eee; */
+    /* padding: 20px; */
+    margin: 0 2em;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styling untuk article */
+article {
+    flex-basis: 75%;
+    /* Main content mengambil 70% dari lebar */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* padding: 20px; */
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 2em;
+    max-width: 800px;
+    margin: auto;
+    
+}
+
+/* Styling untuk gambar */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk paragraf */
+article p {
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk link */
+article a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk heading jika diperlukan */
+article h1,
+article h2,
+article h3 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 1.5em 1em;
+    /* Padding untuk ruang dalam */
+    /* text-align: center; Agar teks berada di tengah */
+    width: 100%;
+    /* Agar kotak search sesuai dengan lebar container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan efek bayangan */
+    margin-bottom: 2.2em;
+    /* Spasi bawah agar tidak menempel pada elemen berikutnya */
+    display: flex;
+    flex-direction: column;
+    /* Tata letak kolom untuk konten vertikal */
+    /* justify-content: center; Agar konten berada di tengah vertikal */
+    /* align-items: center; Agar konten berada di tengah horizontal */
+    height: auto;
+    /* Tinggi otomatis agar menyesuaikan konten */
+}
+
+
+.search-box h2 {
+    /* margin: 0 0 15px; /Spasi bawah teks heading */
+    color: #243B56;
+}
+
+.search-layout {
+    /* padding-top: 1em; */
+    /* align-self: center; */
+    padding-left: 1.3em;
+}
+
+.search {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Rounded search bar */
+    overflow: hidden;
+    width: 100%;
+    /* Search bar memenuhi lebar container */
+    max-width: 500px;
+    /* Lebar maksimal search bar */
+    margin: 0 auto;
+    /* Agar search bar berada di tengah */
+}
+
+.search input {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    /* Input meluas mengikuti ukuran container */
+    outline: none;
+}
+
+.search button {
+    background-color: #fff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search button span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Kategori Box */
+.kategori-box {
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 1.5em 1em;
+    /* Padding untuk ruang dalam */
+    width: 100%;
+    /* Agar kotak search sesuai dengan lebar container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan efek bayangan */
+    margin-bottom: 2.2em;
+    /* Spasi bawah agar tidak menempel pada elemen berikutnya */
+    display: flex;
+    flex-direction: column;
+    /* Tata letak kolom untuk konten vertikal */
+    /* justify-content: center; /* Agar konten berada di tengah vertikal */
+    /* align-items: center; Agar konten berada di tengah horizontal */
+    height: auto;
+}
+
+.kategori-layout {
+    padding-left: 1.3em;    
+}
+
+.kategori-layout h2 {
+    color: #393F4C;
+}
+
+
+.list-kategori{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list-kategori li{
+    margin-bottom: 0.6em;
+    width: 90%;
+}
+
+.list-kategori li a{
+    text-decoration: none;
+    color: #393F4C;}
+
+.list-kategori li a:hover{
+    color: #460551;
+    
+}
+.line-height{
+    line-height: 1.6em;
+}
+.line-height li{
+    margin-bottom: 1em;
+}
+
+.tag-cloud {
+    background-color: #f2f2f2;
+    
+    border-radius: 8px;
+    max-width: 300px;
+    padding: 1.4em;
+    
+  }
+  
+  .tag {
+    display: inline-block;
+    margin: 5px;
+    /* padding: 5/px 10px; */
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    
+  }
+  
+  .tag-1 { font-size: 9px; }
+  .tag-2 { font-size: 9px; }
+  .tag-3 { font-size: 7px; }
+  .tag-4 { font-size: 10px; }
+  .tag-5 { font-size: 16px; }
+  
+
+/* For Mobile */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-inline h1 {
+        font-size: 1.4em;
+    }
+
+    .hero-inline p {
+        font-size: 0.8em;
+    }
+}
+
+
 @media (max-width: 768px) {
     nav {
         padding: 20px 30px;
@@ -168,160 +427,3 @@ nav {
         margin-bottom: 15px;
     }
 }
-
-/* main */
-main{
-    margin: 4em 3em;
-}
-.container {
-    display: flex;
-    /* justify-content: space-between; */
-
-}
-
-/* aside search  */
-aside{
-    flex-basis: 25%; /* Sidebar mengambil 30% dari lebar */
-    /* background-color: #eee; */
-    /* padding: 20px; */
-    margin: 0 2em;
-    height: 100%;
-    width: 100%;
-}
-
-/* Styling untuk article */
-article {
-    flex-basis: 75%; /* Main content mengambil 70% dari lebar */
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    /* padding: 20px; */
-    background-color: #fff;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    margin-bottom: 2em;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* Styling untuk gambar */
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling untuk paragraf */
-article p {
-    text-align: justify;
-    color: #333;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-/* Styling untuk link */
-article a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-article a:hover {
-    text-decoration: underline;
-}
-
-/* Styling untuk heading jika diperlukan */
-article h1, article h2, article h3 {
-    color: #444;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.search-box {
-    background-color: #d1cece;
-    border-radius: 10px; /* Rounded corners */
-    padding: 1.5em 1em; /* Padding untuk ruang dalam */
-    /* text-align: center; Agar teks berada di tengah */
-    width: 100%; /* Agar kotak search sesuai dengan lebar container */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
-    margin-bottom: 20px; /* Spasi bawah agar tidak menempel pada elemen berikutnya */
-    display: flex;
-    flex-direction: column; /* Tata letak kolom untuk konten vertikal */
-    justify-content: center; /* Agar konten berada di tengah vertikal */
-    align-items: center; /* Agar konten berada di tengah horizontal */
-    height: auto; /* Tinggi otomatis agar menyesuaikan konten */
-}
-
-
-.search-box h2 {
-    /* margin: 0 0 15px; /Spasi bawah teks heading */
-    color: #333;
-}
-.search-layout {
-    /* padding-top: 1em; */
-    align-self: center;
-}
-
-.search {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Rounded search bar */
-    overflow: hidden;
-    width: 100%; /* Search bar memenuhi lebar container */
-    max-width: 500px; /* Lebar maksimal search bar */
-    margin: 0 auto; /* Agar search bar berada di tengah */
-}
-
-.search input {
-    border: none;
-    padding: 10px;
-    flex: 1; /* Input meluas mengikuti ukuran container */
-    outline: none;
-}
-
-.search button {
-    background-color: #fff;
-    border: none;
-    padding: 0 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.search button span {
-    font-size: 16px;
-    color: #333;
-}
-
-
-
-/* For Mobile */
-@media (max-width: 480px) {
-    nav {
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        width: 90px;
-    }
-
-    .cta-button {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
-    .hero {
-        height: 50vh;
-    }
-
-    .hero-inline h1 {
-        font-size: 1.4em;
-    }
-
-    .hero-inline p {
-        font-size: 0.8em;
-    }
-}
-
-
