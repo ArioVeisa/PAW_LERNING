@@ -557,3 +557,169 @@ text-align: left;
     margin-top: 5px;
   }
   
+  footer {
+    background-color: #121212;
+    color: #c0c0c0;
+    padding: 4em 6em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo,
+.footer-address,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 250px; /* Minimal lebar setiap kolom */
+}
+
+.footer-logo img {
+    max-width: 340px;
+    margin-bottom: 15px;
+}
+
+.footer-address h4,
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 16px;
+    padding: 12px 0;
+}
+
+.footer-logo p,
+.footer-address p,
+.footer-contact p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-address,
+.footer-links,
+.footer-contact {
+    max-width: 250px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-contact a {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer-contact a:hover,
+.icon-text i:hover {
+    color: #ffffff;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.icon-text i {
+    border: 1px solid #c0c0c0;
+    color: #c0c0c0;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.social-icons a {
+    border: 1px solid #c0c0c0;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #c0c0c0;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin: 8px;
+    color: #c0c0c0;
+}
+
+/* 11. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none; /* Menyembunyikan menu desktop */
+    }
+
+    .hamburger {
+        display: block; /* Menampilkan ikon hamburger pada mobile */
+    }
+
+    .container {
+        flex-direction: column; /* Mengubah layout menjadi kolom pada mobile */
+        margin: 1em; /* Mengurangi margin pada mobile */
+    }
+
+    main {
+        margin: 2em; /* Mengurangi margin utama pada mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 16px; /* Mengurangi padding pada mobile */
+    }
+
+    .hero-inline h1 {
+        font-size: 1.5em; /* Mengurangi ukuran font pada mobile */
+    }
+
+    .hero-inline p {
+        font-size: 0.8em; /* Mengurangi ukuran font pada mobile */
+    }
+
+    article {
+        padding: 1em; /* Menambahkan padding pada artikel */
+    }
+
+    footer {
+        padding: 2em 1em; /* Mengurangi padding footer pada mobile */
+    }
+}
