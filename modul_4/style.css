@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", "Noto Sans", "Helvetica", sans-serif;
+    font-size: 14px;
+    background-color: #F0F0F0; /* Abu-abu Sangat Muda */
+    height: 100%;
+}
+
+.calculator {
+    width: 350px;
+    height: auto;
+    margin: 70px auto 0;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.calculator span {
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.top {
+    position: relative;
+    height: 150px;
+    background-color: #FFFFFF; /* Putih */
+}
+
+.top .unit {
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: 700;
+    color: #424242; /* Abu-abu Tua */
+}
+
+.top .screen {
+    position: relative;
+    width: 100%;
+    top: 20%;
+    height: 80%;
+}
+
+.screen > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px;
+    text-align: right;
+}
+
+.screen .input {
+    color: #212121; /* Hitam */
+    height: 60%;
+    font-size: 35px;
+}
+
+.screen .result {
+    color: #666666; /* Abu-abu Sedang */
+    font-size: 20px;
+    height: 40%;
+}
+
+.bottom {
+    background-color: #90A4AE; /* Abu-abu Kebiruan */
+    height: 300px;
+    color: #FFFFFF; /* Putih */
+    cursor: pointer;
+}
+
+.bottom section {
+    position: relative;
+    height: 100%;
+    float: left;
+    display: flex;
+}
+
+.keys {
+    width: 80%;
+}
+
+.keys .column {
+    display: flex;
+    flex-grow: 1;
+}
+
+.keys .column,
+.operators {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.keys .column span,
+.operators span {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+    line-height: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.keys .column span {
+    font-size: 25px;
+    background-color: #B0BEC5; /* Abu-abu Muda */
+}
+
+.keys .column span:hover,
+.operators span:hover {
+    background-color: #FF5722; /* Merah */
+}
+
+.operators {
+    width: 20%;
+    font-size: 18px;
+    background-color: #FFAB40; /* Kuning Rempah */
+}
+
+.delete {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.credit {
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+}
+
+.credit a,
+.error {
+    color: #c2185b;
+}
